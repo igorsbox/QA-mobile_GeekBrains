@@ -68,7 +68,7 @@ public class LoginPage {
         $(locator().errorSamePassword()).shouldHave(Condition.text(textError));
         return new LoginPage();
     }
-    @Step("Делаем скриншот главной страницы и сравниваем с требованием.")
+    @Step("Делаем скриншот Sign Up страницы и сравниваем с требованием.")
     public LoginPage checkScreenshot() {
         // Загружаем ожидаемое изображения для сравнения.
         BufferedImage expectedImage = ImageComparisonUtil.readImageFromResources("src/main/resources/expectedScreenshots/LoginForm_Screenshot.png");
