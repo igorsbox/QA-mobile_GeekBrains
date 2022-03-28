@@ -6,7 +6,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners(AllureListener.class)
-public class CheckFailPassword extends BaseTest {
+public class CheckFailPasswordTest extends BaseTest {
 
     @Test
     public void checkFailPasswords() {
