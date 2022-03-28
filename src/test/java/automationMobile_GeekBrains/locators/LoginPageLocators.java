@@ -12,4 +12,30 @@ public class LoginPageLocators {
     public By loginErrorText() {
         return MobileBy.xpath("//android.widget.ScrollView[@content-desc=\"Login-screen\"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView[1]");
     }
+
+    public By signUpForm() {
+        return MobileBy.AccessibilityId("button-sign-up-container");
+    }
+
+    public By emailField() {
+        return MobileBy.AccessibilityId("input-email");
+    }
+
+    public By passwordField() {
+        return MobileBy.AccessibilityId("input-password");
+    }
+
+    public By repeatPasswordField() {
+        return MobileBy.AccessibilityId("input-repeat-password");
+    }
+
+    public By signUpButton() {
+        return MobileBy.AccessibilityId("button-SIGN UP");
+    }
+
+    public By errorSamePassword() {
+        return MobileBy.xpath("//android.widget" +
+                ".ScrollView[@content-desc=\"Login-screen\"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView[3]");
+    }
+
 }
