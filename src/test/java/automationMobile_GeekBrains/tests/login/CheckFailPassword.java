@@ -17,7 +17,8 @@ public class CheckFailPassword extends BaseTest {
                 .fillPassword("12345678")
                 .fillRepeatPassword("87654321")
                 .clickSignUpButton()
-                .checkSamePasswordErrorText("Please enter the same password");
+                .checkSamePasswordErrorText("Please enter the same password")
+                .checkScreenshot();
     }
 
 
