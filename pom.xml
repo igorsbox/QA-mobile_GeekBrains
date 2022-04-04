@@ -8,6 +8,22 @@
     <artifactId>Appium</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <profiles>
+        <profile>
+            <id>iOS</id>
+            <properties>
+                <platform>iOS</platform>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Android</id>
+            <properties>
+                <platform>Android</platform>
+            </properties>
+        </profile>
+    </profiles>
+
 
     <properties>
         <aspectj.version>1.8.10</aspectj.version>
@@ -71,6 +87,11 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M5</version>
                     <configuration>
+                        <!--для работы profiles-->
+                        <systemPropertyVariables>
+                            <platform>${platform}</platform>
+                        </systemPropertyVariables>
+
                         <testFailureIgnore>false</testFailureIgnore>
                         <argLine>
                             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
@@ -153,5 +174,7 @@
             <version>1.7.5</version>
         </dependency>
     </dependencies>
+
+
 
 </project>

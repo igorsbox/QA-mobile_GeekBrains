@@ -4,6 +4,7 @@ import automationMobile_GeekBrains.base.BaseTest;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Description;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,6 +14,7 @@ import java.net.URL;
 public class AutoTest_GB extends BaseTest {
 
     @Test
+    @Description("Проверяем сообщение об ошибке при невалидной email.")
     public void checkEmptyEmail() {
 
 //        // Устанавливаем capabilities.
@@ -39,7 +41,7 @@ public class AutoTest_GB extends BaseTest {
 //        MobileElement errorText = (MobileElement) driver.findElementByXPath("//android.widget" +
 //                ".ScrollView[@content-desc=\"Login-screen\"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView[1]");
 //        Assert.assertEquals(errorText.getText(), "Please enter a valid email address");
-        openApp("pixel 11")
+        openApp()
                 .clickLoginMenuButton()
                 .clickLoginButton()
                 .checkLoginErrorText("Please enter a valid email address");

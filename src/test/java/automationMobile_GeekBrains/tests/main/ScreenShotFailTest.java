@@ -10,7 +10,7 @@ public class ScreenShotFailTest extends BaseTest {
 
     @Test
     public void checkMainPageScreen(){
-        openApp("pixel 11")
+        openApp()
                 .checkFailScreenshot();
     }
 }

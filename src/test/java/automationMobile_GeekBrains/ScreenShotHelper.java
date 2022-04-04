@@ -13,7 +13,7 @@ public class ScreenShotHelper extends BaseTest {
 
     @Test
     public void createScreen() {
-        openApp("pixel 11");
+        openApp();
         File actualScreenshot = $(MobileBy.AccessibilityId("Home-screen")).screenshot();
     }
 }

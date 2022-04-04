@@ -10,7 +10,7 @@ public class CheckFailPasswordTest extends BaseTest {
 
     @Test
     public void checkFailPasswords() {
-        openApp("pixel 11")
+        openApp()
                 .clickLoginMenuButton()
                 .clickSignUpForm()
                 .fillEmail("123@1.ru")
