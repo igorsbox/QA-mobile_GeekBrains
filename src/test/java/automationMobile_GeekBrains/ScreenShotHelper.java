@@ -11,10 +11,10 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ScreenShotHelper extends BaseTest {
 
-    @Test
-    public void createScreen() {
-        openApp();
-        File actualScreenshot = $(MobileBy.AccessibilityId("Home-screen")).screenshot();
-    }
+//    @Test
+//    public void createScreen() {
+//        openApp();
+//        File actualScreenshot = $(MobileBy.AccessibilityId("Home-screen")).screenshot();
+//    }
 }
 

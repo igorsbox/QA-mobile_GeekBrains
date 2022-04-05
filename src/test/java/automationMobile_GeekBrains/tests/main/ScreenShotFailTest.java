@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 @Listeners(AllureListener.class)
 public class ScreenShotFailTest extends BaseTest {
 
-    @Test
-    public void checkMainPageScreen(){
-        openApp()
-                .checkFailScreenshot();
-    }
+//    @Test
+//    public void checkMainPageScreen(){
+//        openApp()
+//                .checkFailScreenshot();
+//    }
 }

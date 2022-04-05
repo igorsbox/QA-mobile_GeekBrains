@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 public class AndroidMainPageLocators implements MainPageLocators {
     @Override
     public By loginButton() {
-        return By.xpath("//android.view.ViewGroup[@content-desc=\"Login\"]/android.widget.TextView");
+        return MobileBy.AccessibilityId("Login");
     }
 
     @Override

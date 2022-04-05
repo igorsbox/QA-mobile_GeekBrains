@@ -28,40 +28,40 @@ public class MainPage {
         return new LoginPage();
     }
 
-    @Step("Делаем скриншот главной страницы и сравниваем с требованием.")
-    public MainPage checkScreenshot() {
-        // Загружаем ожидаемое изображения для сравнения.
-        BufferedImage expectedImage = ImageComparisonUtil.readImageFromResources("src/main/resources/expectedScreenshots/mainPage.png");
-        // Делаем актуальный скриншот, используя элемент и игнорируя другие части экрана.
-        File actualScreenshot = $(locator().homeScreen()).screenshot();
-        // Загружаем актуальный скриншот.
-        BufferedImage actualImage = ImageComparisonUtil.readImageFromResources("screenshots/actual/" + actualScreenshot.getName());
-
-        // Где будем хранить скриншот с различиями в случае падения теста.
-        File resultDestination = new File("diff/diff_CheckMainPageScreenshot.png");
-
-        // Сравниваем.
-        ImageComparisonResult imageComparisonResult = new ImageComparison(expectedImage, actualImage, resultDestination).compareImages();
-        assertEquals(ImageComparisonState.MATCH, imageComparisonResult.getImageComparisonState());
-        return this;
-    }
+//    @Step("Делаем скриншот главной страницы и сравниваем с требованием.")
+//    public MainPage checkScreenshot() {
+//        // Загружаем ожидаемое изображения для сравнения.
+//        BufferedImage expectedImage = ImageComparisonUtil.readImageFromResources("src/main/resources/expectedScreenshots/mainPage.png");
+//        // Делаем актуальный скриншот, используя элемент и игнорируя другие части экрана.
+//        File actualScreenshot = $(locator().homeScreen()).screenshot();
+//        // Загружаем актуальный скриншот.
+//        BufferedImage actualImage = ImageComparisonUtil.readImageFromResources("screenshots/actual/" + actualScreenshot.getName());
+//
+//        // Где будем хранить скриншот с различиями в случае падения теста.
+//        File resultDestination = new File("diff/diff_CheckMainPageScreenshot.png");
+//
+//        // Сравниваем.
+//        ImageComparisonResult imageComparisonResult = new ImageComparison(expectedImage, actualImage, resultDestination).compareImages();
+//        assertEquals(ImageComparisonState.MATCH, imageComparisonResult.getImageComparisonState());
+//        return this;
+//    }
 
     // Этот код -- пример того, как делать в реальном проекте не следует. Это дублирование кода, а такого нужно избегать.
-    @Step("Делаем проверку падения теста по скриншоту.")
-    public MainPage checkFailScreenshot() {
-        // Загружаем ожидаемо неверное изображение для сравнения.
-        BufferedImage expectedImage = ImageComparisonUtil.readImageFromResources("src/main/resources/expectedScreenshots/failTest.png");
-        // Делаем актуальный скриншот, используя элемент и игнорируя другие части экрана.
-        File actualScreenshot = $(locator().homeScreen()).screenshot();
-        // Загружаем актуальный скриншот.
-        BufferedImage actualImage = ImageComparisonUtil.readImageFromResources("screenshots/actual/" + actualScreenshot.getName());
-
-        // Где будем хранить скриншот с различиями в случае падения теста.
-        File resultDestination = new File("diff/diff_CheckFailMainPageScreenshot.png");
-
-        // Сравниваем.
-        ImageComparisonResult imageComparisonResult = new ImageComparison(expectedImage, actualImage, resultDestination).compareImages();
-        assertEquals(ImageComparisonState.MATCH, imageComparisonResult.getImageComparisonState());
-        return this;
-    }
+//    @Step("Делаем проверку падения теста по скриншоту.")
+//    public MainPage checkFailScreenshot() {
+//        // Загружаем ожидаемо неверное изображение для сравнения.
+//        BufferedImage expectedImage = ImageComparisonUtil.readImageFromResources("src/main/resources/expectedScreenshots/failTest.png");
+//        // Делаем актуальный скриншот, используя элемент и игнорируя другие части экрана.
+//        File actualScreenshot = $(locator().homeScreen()).screenshot();
+//        // Загружаем актуальный скриншот.
+//        BufferedImage actualImage = ImageComparisonUtil.readImageFromResources("screenshots/actual/" + actualScreenshot.getName());
+//
+//        // Где будем хранить скриншот с различиями в случае падения теста.
+//        File resultDestination = new File("diff/diff_CheckFailMainPageScreenshot.png");
+//
+//        // Сравниваем.
+//        ImageComparisonResult imageComparisonResult = new ImageComparison(expectedImage, actualImage, resultDestination).compareImages();
+//        assertEquals(ImageComparisonState.MATCH, imageComparisonResult.getImageComparisonState());
+//        return this;
+//    }
 }
