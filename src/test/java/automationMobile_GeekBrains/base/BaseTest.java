@@ -78,7 +78,7 @@ public class BaseTest {
                 capabilities.setCapability("platformVersion", "15");
                 capabilities.setCapability("udid", "2E20F3A4-ACC1-4799-A4F5-83358E56AB2E");
                 capabilities.setCapability("automationName", "XCUITest");
-                capabilities.setCapability("app", "/Users/v.shekhavtsov/Downloads/iOS-Simulator-NativeDemoApp-0.2.1.app");
+                capabilities.setCapability("app", "/../iOS-Simulator-NativeDemoApp-0.2.1.app");
                 break;
         }
 

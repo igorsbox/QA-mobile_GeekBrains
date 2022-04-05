@@ -1,6 +1,8 @@
 package automationMobile_GeekBrains.pages;
 
-import automationMobile_GeekBrains.locators.MainPageLocators;
+import automationMobile_GeekBrains.locators.LocatorService;
+//import automationMobile_GeekBrains.locators.MainPageLocators;
+import automationMobile_GeekBrains.locators.interfaces.MainPageLocators;
 import com.github.romankh3.image.comparison.ImageComparison;
 import com.github.romankh3.image.comparison.ImageComparisonUtil;
 import com.github.romankh3.image.comparison.model.ImageComparisonResult;
@@ -17,7 +19,7 @@ public class MainPage {
 
     // Метод позволяет нам работать с локаторами для нужной нам страницы.
     private MainPageLocators locator() {
-        return new MainPageLocators();
+        return LocatorService.MAIN_PAGE_LOCATORS;
     }
 
     @Step("Кликаем по кнопке логина в меню и переходим на новую страницу логина")
