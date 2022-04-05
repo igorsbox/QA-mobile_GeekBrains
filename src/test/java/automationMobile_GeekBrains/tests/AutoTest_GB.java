@@ -13,6 +13,8 @@ import java.net.URL;
 
 public class AutoTest_GB extends BaseTest {
 
+    public static final String VALID_EMAIL_ADDRESS = "Please enter a valid email address";
+
     @Test
     @Description("Проверяем сообщение об ошибке при невалидной email.")
     public void checkEmptyEmail() {
@@ -44,7 +46,7 @@ public class AutoTest_GB extends BaseTest {
         openApp()
                 .clickLoginMenuButton()
                 .clickLoginButton()
-                .checkLoginErrorText("Please enter a valid email address");
+                .checkLoginErrorText(VALID_EMAIL_ADDRESS);
     }
 
 //    @Test
