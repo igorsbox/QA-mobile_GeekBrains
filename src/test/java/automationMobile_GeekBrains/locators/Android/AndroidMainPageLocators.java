@@ -14,5 +14,7 @@ public class AndroidMainPageLocators implements MainPageLocators {
     public By homeScreen() {
         return MobileBy.AccessibilityId("Home-screen");
     }
+
+
 }
 
